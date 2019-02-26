@@ -1,0 +1,82 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+    text-align: left;
+}
+
+table {
+    border-spacing: 5px;
+}
+
+body {
+    margin: 0;
+    --left-indent: 7rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+a {
+    color: darkgrey;
+}
+
+a:visited {
+    color: grey;
+}
+
+p {
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 100%;
+    background: #FDE70E;
+}
+
+header .title {
+    --title-font-size: 3rem;
+    padding-top: calc( var(--left-indent) - var(--title-font-size));
+    padding-left: var(--left-indent);
+    margin-top: 0;
+    font-size: var(--title-font-size);
+}
+
+@keyframes slide_in_from_right {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide {
+    animation-name: slide_in_from_right;
+    animation-duration: 1s;
+}
+
+header img {
+    float: right;
+    max-height: 20rem;
+}
+
+main {
+    padding-left: var(--left-indent);
+}
+
+
+footer {
+    background: linear-gradient(darkgrey,lightgrey);
+    padding-left: var(--left-indent);
+}
